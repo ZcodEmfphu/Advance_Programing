@@ -2,7 +2,7 @@ package lab2;
 
 import java.util.Scanner;
 
-public class Ex1_5 {
+public class Ex5 {
 
 	public static int calculateIntersectionLength(int a1, int b1, int a2, int b2) {
 		int endIntersection = Math.min(b1, b2);
