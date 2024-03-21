@@ -2,7 +2,7 @@ package lab2;
 
 import java.util.Scanner;
 
-public class Ex1_2 {
+public class Ex2 {
 
 	public static boolean isLeapYear(int year) {
 		if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {

@@ -2,7 +2,7 @@ package lab2;
 
 import java.util.Scanner;
 
-public class Ex1_3 {
+public class Ex3 {
 
 	// ax+b=0
 	public static double solveLinearEquation(double a, double b) {

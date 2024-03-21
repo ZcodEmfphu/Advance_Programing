@@ -2,7 +2,7 @@ package lab2;
 
 import java.util.Scanner;
 
-public class Ex1_1 {
+public class Ex1 {
 
 	public static float findMaxNumber(float a, float b) {
 		if (a - b < 0)

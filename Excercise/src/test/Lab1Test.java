@@ -1,8 +1,14 @@
-package lab1;
+package test;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import lab1.Excercise1;
+import lab1.Excercise2;
+import lab1.Excercise3;
+import lab1.Excercise4;
+import lab1.Excercise5;
 
 public class Lab1Test {
 
