@@ -1,6 +1,9 @@
-package week_1;
+package unitTestCase.week1;
 
 import org.junit.Test;
+
+import week_1.NumberAdder;
+
 import static org.junit.Assert.*;
 
 public class NumberAdderTest {
