@@ -1,6 +1,8 @@
-package week_1;
+package unitTestCase.week1;
 import org.junit.Assert;
 import org.junit.Test;
+
+import week_1.FactorialCalculator;
 
 import static org.junit.Assert.*;
 
