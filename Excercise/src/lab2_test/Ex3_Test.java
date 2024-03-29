@@ -1,4 +1,4 @@
-package test2;
+package lab2_test;
 
 import static org.junit.Assert.*;
 
@@ -6,13 +6,7 @@ import org.junit.Test;
 
 import lab2.Ex2;
 
-public class Ex2_Test {
-
-	@Test
-	public void isLeapYear() {
-		assertFalse(Ex2.isLeapYear(1000));
-		assertTrue(Ex2.isLeapYear(2024));
-	}
+public class Ex3_Test {
 
 	@Test
 	public void getDayInMonth() {
