@@ -41,7 +41,6 @@ public class Ex1 {
 
 	public static int sumOfArrays(int[] arr) {
 		int res = 0;
-//		int sum = arr[0];
 		for (int i = 0; i < arr.length; i++) {
 			res += arr[i];
 		}
