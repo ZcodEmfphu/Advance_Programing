@@ -167,10 +167,98 @@ public class MainProgram extends JFrame implements ActionListener {
 		JButton containsOnlyDigits = new JButton();
 		containsOnlyDigits = new JButton("Contains Only Digits");
 		containsOnlyDigits.setFont(new Font("Arial", Font.PLAIN, 15));
-		containsOnlyDigits.setSize(200, 30);
+		containsOnlyDigits.setSize(190, 30);
 		containsOnlyDigits.setLocation(350, 360);
 		containsOnlyDigits.addActionListener(this);
 		c.add(containsOnlyDigits);
+
+		JButton countVowels = new JButton();
+		countVowels = new JButton("Count Vowels");
+		countVowels.setFont(new Font("Arial", Font.PLAIN, 15));
+		countVowels.setSize(140, 30);
+		countVowels.setLocation(545, 360);
+		countVowels.addActionListener(this);
+		c.add(countVowels);
+
+		JButton reverseString = new JButton();
+		reverseString = new JButton("Reverse String");
+		reverseString.setFont(new Font("Arial", Font.PLAIN, 15));
+		reverseString.setSize(150, 30);
+		reverseString.setLocation(20, 400);
+		reverseString.addActionListener(this);
+		c.add(reverseString);
+
+		JButton areAnagrams = new JButton();
+		areAnagrams = new JButton("Anagrams");
+		areAnagrams.setFont(new Font("Arial", Font.PLAIN, 15));
+		areAnagrams.setSize(150, 30);
+		areAnagrams.setLocation(180, 400);
+		areAnagrams.addActionListener(this);
+		c.add(areAnagrams);
+
+		JButton removeSpecialCharacters = new JButton();
+		removeSpecialCharacters = new JButton("Remove Special Characters");
+		removeSpecialCharacters.setFont(new Font("Arial", Font.PLAIN, 15));
+		removeSpecialCharacters.setSize(230, 30);
+		removeSpecialCharacters.setLocation(340, 400);
+		removeSpecialCharacters.addActionListener(this);
+		c.add(removeSpecialCharacters);
+
+		JButton removeWhiteSpaces1 = new JButton();
+		removeWhiteSpaces1 = new JButton("Remove White Spaces");
+		removeWhiteSpaces1.setFont(new Font("Arial", Font.PLAIN, 15));
+		removeWhiteSpaces1.setSize(200, 30);
+		removeWhiteSpaces1.setLocation(20, 440);
+		removeWhiteSpaces1.addActionListener(this);
+		c.add(removeWhiteSpaces1);
+
+		JButton capitalizeFirstLetterOfEachWord = new JButton();
+		capitalizeFirstLetterOfEachWord = new JButton("Capitalize First Letter Of Each Word");
+		capitalizeFirstLetterOfEachWord.setFont(new Font("Arial", Font.PLAIN, 15));
+		capitalizeFirstLetterOfEachWord.setSize(300, 30);
+		capitalizeFirstLetterOfEachWord.setLocation(225, 440);
+		capitalizeFirstLetterOfEachWord.addActionListener(this);
+		c.add(capitalizeFirstLetterOfEachWord);
+
+		JButton isPalindrome = new JButton();
+		isPalindrome = new JButton("Palindrome");
+		isPalindrome.setFont(new Font("Arial", Font.PLAIN, 15));
+		isPalindrome.setSize(150, 30);
+		isPalindrome.setLocation(530, 440);
+		isPalindrome.addActionListener(this);
+		c.add(isPalindrome);
+
+		JButton getAllSubstrings = new JButton();
+		getAllSubstrings = new JButton("All Substrings");
+		getAllSubstrings.setFont(new Font("Arial", Font.PLAIN, 15));
+		getAllSubstrings.setSize(150, 30);
+		getAllSubstrings.setLocation(20, 480);
+		getAllSubstrings.addActionListener(this);
+		c.add(getAllSubstrings);
+
+		JButton reverseString1 = new JButton();
+		reverseString1 = new JButton("Reverse");
+		reverseString1.setFont(new Font("Arial", Font.PLAIN, 15));
+		reverseString1.setSize(100, 30);
+		reverseString1.setLocation(180, 480);
+		reverseString1.addActionListener(this);
+		c.add(reverseString1);
+
+		JButton concatenateStrings = new JButton();
+		concatenateStrings = new JButton("Concatenate");
+		concatenateStrings.setFont(new Font("Arial", Font.PLAIN, 15));
+		concatenateStrings.setSize(150, 30);
+		concatenateStrings.setLocation(285, 480);
+		concatenateStrings.addActionListener(this);
+		c.add(concatenateStrings);
+
+		JButton removeSpecialCharacters1 = new JButton();
+		removeSpecialCharacters1 = new JButton("Remove Special");
+		removeSpecialCharacters1.setFont(new Font("Arial", Font.PLAIN, 15));
+		removeSpecialCharacters1.setSize(200, 30);
+		removeSpecialCharacters1.setLocation(440, 480);
+		removeSpecialCharacters1.addActionListener(this);
+		c.add(removeSpecialCharacters1);
 	}
 
 	@Override
@@ -216,7 +304,88 @@ public class MainProgram extends JFrame implements ActionListener {
 		}
 		if (e.getActionCommand().equals("Second Most Frequent")) {
 			String inputText = tinput1.getText();
-			String output = Ex7.findSecondMostFrequentChar(inputText);
+			char charOut = Ex7.findSecondMostFrequentChar(inputText);
+			String output = String.valueOf(charOut);
+			toutput.setText("Second Most Frequent: " + output);
+		}
+		if (e.getActionCommand().equals("Remove First Last")) {
+			String inputText = tinput1.getText();
+			String output = Ex8.removeFirstLastCharacter(inputText);
+			toutput.setText("Remove First Last: " + output);
+		}
+		if (e.getActionCommand().equals("Count Words")) {
+			String inputText = tinput1.getText();
+			String output = Ex9.countWords(inputText);
+			toutput.setText("Count Words: " + output);
+		}
+		if (e.getActionCommand().equals("Contains Only Digits")) {
+			String inputText = tinput1.getText();
+
+			boolean output = Ex10.containsOnlyDigits(inputText);
+			if (output) {
+				toutput.setText("Contains Only Digits");
+			} else {
+				toutput.setText("Not Contains Only Digits");
+			}
+		}
+		if (e.getActionCommand().equals("Count Vowels")) {
+			String inputText = tinput1.getText();
+			String output = Ex11.countVowels(inputText);
+			toutput.setText(output);
+		}
+		if (e.getActionCommand().equals("Reverse String")) {
+			String inputText = tinput1.getText();
+			String output = Ex12.reverseString(inputText);
+			toutput.setText("Reverse String: " + output);
+		}
+		if (e.getActionCommand().equals("Anagrams")) {
+			String inputText1 = tinput1.getText();
+			String inputText2 = tinput2.getText();
+			boolean output = Ex13.areAnagrams(inputText1, inputText2);
+			if (output) {
+				toutput.setText("Two string are Anagrams.");
+			} else {
+				toutput.setText("Two string are not Anagrams.");
+			}
+		}
+		if (e.getActionCommand().equals("Remove Special Characters")) {
+			String inputText = tinput1.getText();
+			String output = Ex14.removeWhiteSpaces(inputText);
+			toutput.setText(output);
+		}
+		if (e.getActionCommand().equals("Remove White Spaces")) {
+			String inputText = tinput1.getText();
+			String output = Ex15.capitalizeFirstLetterOfEachWord(inputText);
+			toutput.setText(output);
+		}
+		if (e.getActionCommand().equals("Palindrome")) {
+			String inputText = tinput1.getText();
+			boolean output = Ex16.isPalindrome(inputText);
+			if (output) {
+				toutput.setText("The string is a palindrome.");
+			} else {
+				toutput.setText("The string is a not palindrome.");
+			}
+		}
+		if (e.getActionCommand().equals("All Substrings")) {
+			String inputText = tinput1.getText();
+			String output = Ex17.getAllSubstrings(inputText);
+			toutput.setText(output);
+		}
+		if (e.getActionCommand().equals("Reverse")) {
+			String inputText = tinput1.getText();
+			String output = Ex18.reverseString(inputText);
+			toutput.setText(output);
+		}
+		if (e.getActionCommand().equals("Concatenate")) {
+			String inputText1 = tinput1.getText();
+			String inputText2 = tinput2.getText();
+			String output = Ex19.concatenateStrings(inputText1, inputText2);
+			toutput.setText(output);
+		}
+		if (e.getActionCommand().equals("Remove Special Characters")) {
+			String inputText1 = tinput1.getText();
+			String output = Ex20.removeSpecialCharacters(inputText1);
 			toutput.setText(output);
 		}
 
