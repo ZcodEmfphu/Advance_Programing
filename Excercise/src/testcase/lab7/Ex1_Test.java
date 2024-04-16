@@ -12,7 +12,7 @@ import lab7.ex1.LibraryMembers;
 public class Ex1_Test {
 
 	@Test
-	public void bookManagementTest() {
+	public void libraryManagementSystem() {
 
 		Library library = new Library("Thư Viện Nông Lâm");
 
