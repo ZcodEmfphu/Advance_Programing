@@ -1,69 +1,53 @@
 package lab8;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.Font;
 import java.awt.GridLayout;
 
-import javax.swing.ButtonGroup;
+import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JRadioButton;
-import javax.swing.JTextArea;
-import javax.swing.SwingConstants;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.LineBorder;
+import javax.swing.JTextField;
 
 public class Ex2 {
 
 	public Ex2() {
-		JFrame frame = new JFrame("Ex2");
-		frame.setLayout(new GridLayout(3, 1));
 
-		JPanel panel1 = new JPanel(new BorderLayout());
-		JPanel textPanel = new JPanel(new BorderLayout());
+		JFrame frame = new JFrame("The front View of a Microware Oven");
+		frame.setLayout(new GridLayout(1, 2));
 
-		textPanel.setBorder(new EmptyBorder(10, 10, 0, 10));
+		// Panel left
+		JPanel panel1 = new JPanel();
+		panel1.setLayout(new BorderLayout());
+		JButton btn1 = new JButton("Food to be placed here");
+		panel1.add(btn1);
 
-		JLabel titleLabel = new JLabel("Thay đổi tính hiệu đèn giao thông");
-		titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		// Panel right
+		JPanel panel2 = new JPanel();
+		panel2.setLayout(new BorderLayout());
 
-		JTextArea textArea = new JTextArea();
-		textArea.setText("- Đỏ\n- Xanh\n- Vàng: Bạn chọn màu vàng!");
+		// Panel right top
+		JPanel panel21 = new JPanel();
+		panel21.setLayout(new BorderLayout());
+		JTextField textField = new JTextField();
+		textField.setText("Time to be display here");
+		panel21.add(textField);
 
-		textArea.setBorder(new LineBorder(Color.BLUE, 2));
-		textArea.setEditable(false);
-		textArea.setEnabled(false);
-		Font font = new Font(Font.SANS_SERIF, Font.BOLD, 12);
-		textArea.setFont(font);
+		// Panel right bottom
+		JPanel panel22 = new JPanel();
+		panel22.setLayout(new GridLayout(4, 3, 2, 2));
+		String[] btnArr = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "Start", "End" };
+		for (String items : btnArr) {
+			JButton btn2 = new JButton(items);
+			panel22.add(btn2);
+		}
 
-		textPanel.add(titleLabel, BorderLayout.NORTH);
-		textPanel.add(textArea, BorderLayout.CENTER);
-		panel1.add(textPanel, BorderLayout.CENTER);
-
-		JPanel panel2 = new JPanel(new FlowLayout(FlowLayout.CENTER));
-		JLabel label = new JLabel("Chọn loài đèn: ");
-		JRadioButton radioButton1 = new JRadioButton("Đỏ");
-		JRadioButton radioButton2 = new JRadioButton("Xanh");
-		JRadioButton radioButton3 = new JRadioButton("Vàng");
-
-		ButtonGroup group = new ButtonGroup();
-		group.add(radioButton1);
-		group.add(radioButton2);
-		group.add(radioButton3);
-		radioButton3.setSelected(true);
-
-		panel2.add(label);
-		panel2.add(radioButton1);
-		panel2.add(radioButton2);
-		panel2.add(radioButton3);
+		panel2.add(panel21, BorderLayout.NORTH);
+		panel2.add(panel22, BorderLayout.CENTER);
 
 		frame.add(panel1);
 		frame.add(panel2);
 
-		frame.setSize(300, 400);
+		frame.setSize(400, 300);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
@@ -72,5 +56,4 @@ public class Ex2 {
 	public static void main(String[] args) {
 		new Ex2();
 	}
-
 }
