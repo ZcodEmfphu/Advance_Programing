@@ -2,29 +2,25 @@ package final_.ex1;
 
 public class FindNumber {
 
-	 public void findNumber(int[] arr, int num) {
-	        boolean found = false;
-	        // Loop through each element in the array
-	        for (int i = 0; i < arr.length; i++) {
-	            // Loop through the elements after the current element
-	            for (int j = i + 1; j < arr.length; j++) {
-	                // Check if the sum of two elements equals the given number
-	                if (arr[i] + arr[j] == num) {
-	                    System.out.println(arr[i] + "\t" + arr[j]);
-	                    found = true;
-	                }
-	            }
-	        }
-	        // Print message if no pairs found
-	        if (!found) {
-	            System.out.println("No pairs found that sum to " + num);
-	        }
-	    }
+	public void findNumber(int[] arr, int num) {
+		boolean found = false;
+		// Duyệt qua từng phần tử trong mảng
+		for (int i = 0; i < arr.length; i++) {
+			// Kiểm tra nếu phần tử hiện tại bằng số cần tìm
+			if (arr[i] == num) {
+				System.out.println("Value: " + arr[i] + ", Index: " + i);
+				found = true;
+			}
+		}
+		// Nếu không tìm thấy phần tử nào
+		if (!found) {
+			System.out.println("Không tìm thấy giá trị: " + num + " trong mảng.");
+		}
+	}
 
-	    public static void main(String[] args) {
-	        FindNumber findNumber = new FindNumber();
-	        int arr[] = { 1, 2, 3, 4, 5 };
-	        findNumber.findNumber(arr, 5);  // Change the sum to demonstrate the functionality
-	    }
-
+	public static void main(String[] args) {
+		FindNumber findNumber = new FindNumber();
+		int arr[] = { 1, 2, 3, 4, 5 };
+		findNumber.findNumber(arr, 7);
+	}
 }
